@@ -152,14 +152,14 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': DEFAULT_RENDERER_CLASSES,
 }
 
-# if os.getcwd() == '/app':
-#     import dj_database_url
-#     db_from_env = dj_database_url.config(conn_max_age=500)
-#     DATABASES['default'].update(db_from_env)
+if os.getcwd() == '/app':
+    import dj_database_url
+    db_from_env = dj_database_url.config(conn_max_age=500)
+    DATABASES['default'].update(db_from_env)
 
-#     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-#     ALLOWED_HOSTS = ['twitter-10809.herokuapp.com']
-#     DEBUG = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    # ALLOWED_HOSTS = ['twitter-10809.herokuapp.com']
+    # DEBUG = True
     # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(file)))
 
-# django_heroku.settings(locals())
+django_heroku.settings(locals())
