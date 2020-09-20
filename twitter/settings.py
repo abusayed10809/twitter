@@ -87,7 +87,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
-        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -160,6 +160,6 @@ if os.getcwd() == '/app':
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     ALLOWED_HOSTS = ['twitter-10809.herokuapp.com']
     DEBUG = True
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(file)))
+    # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(file)))
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
